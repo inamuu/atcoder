@@ -8,4 +8,4 @@ X = arr.zip(arr2)
 
 S = gets.chomp
 S2 = X.select { | v2 | v2[1]==S }
-p S2[0]
+puts S2[0][0]
