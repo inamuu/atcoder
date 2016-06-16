@@ -7,5 +7,5 @@ arr2 = Array.new
 X = arr.zip(arr2)
 
 S = gets.chomp
-p S
-p X.select { | v2 | v2[1]==S }
+S2 = X.select { | v2 | v2[1]==S }
+p S2[0]
