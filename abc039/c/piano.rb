@@ -1,11 +1,16 @@
 K = "WBWBWWBWBWBW" * 3
 
-arr = %w[ Do Re Mi Fa So La Si ]
+arr1 = %w[ Do Do# Re Re# Mi Fa Fa# So So# La La# Si ]
 arr2 = Array.new
-(0..6).map {| v |arr2 << K[v,20]}
+(0..11).each do | v |
+  if /0|2|4|5|7|9|11/ =~ v
+    arr2 << K[v,20]
+  end
+end
 
-X = arr.zip(arr2)
-
+X = arr1.zip(arr2)
+p X
+exit
 S = gets.chomp
 S2 = X.select { | v2 | v2[1]==S }
 puts S2[0][0]
