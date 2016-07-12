@@ -6,6 +6,6 @@ N[1].split(/ /).each do | val |
   i = i + 1
 end
 
-p Hash[ hash.sort_by { | _, v | -v } ]
+A = Hash[ hash.sort_by { | _, v | -v } ]
 
-#arr.each.with_index(1) { | index, val | puts val }
+A.map { | key, value | puts key }
